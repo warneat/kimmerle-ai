@@ -1,0 +1,26 @@
+2024-07-08 01:24:49,224 INFO: Using device: cpu
+2024-07-08 01:24:49,231 INFO: Starting training for the first model...
+2024-07-08 02:03:30,576 INFO: Using device: cpu
+2024-07-08 02:03:30,586 INFO: Starting training for the first model...
+2024-07-08 02:03:30,592 WARNING: File not found: ./small_set/train_images/527598501/3800352180/33.dcm. Skipping.
+2024-07-08 02:03:30,593 WARNING: File not found: ./small_set/train_images/527598501/3800352180/39.dcm. Skipping.
+2024-07-08 02:03:30,609 WARNING: File not found: ./small_set/train_images/560780529/3245583008/23.dcm. Skipping.
+2024-07-08 02:03:30,609 WARNING: File not found: ./small_set/train_images/396842952/2252437511/23.dcm. Skipping.
+2024-07-08 02:03:30,610 WARNING: File not found: ./small_set/train_images/408455883/2293150132/24.dcm. Skipping.
+2024-07-08 02:03:30,632 WARNING: File not found: ./small_set/train_images/435244060/3639597459/18.dcm. Skipping.
+2024-07-08 02:03:30,633 WARNING: File not found: ./small_set/train_images/596819592/41185747/19.dcm. Skipping.
+2024-07-08 02:03:30,633 WARNING: File not found: ./small_set/train_images/428900736/167587595/11.dcm. Skipping.
+2024-07-08 02:03:30,657 WARNING: File not found: ./small_set/train_images/390498354/953491872/13.dcm. Skipping.
+2024-07-08 02:03:30,657 WARNING: File not found: ./small_set/train_images/385414562/1803218037/6.dcm. Skipping.
+2024-07-08 02:03:30,657 WARNING: File not found: ./small_set/train_images/596819592/41185747/18.dcm. Skipping.
+2024-07-08 02:03:30,657 WARNING: File not found: ./small_set/train_images/545140827/2792938333/19.dcm. Skipping.
+2024-07-08 02:03:30,657 WARNING: File not found: ./small_set/train_images/379677390/1157466170/13.dcm. Skipping.
+2024-07-08 02:03:30,672 WARNING: File not found: ./small_set/train_images/581655354/4274403996/11.dcm. Skipping.
+2024-07-08 02:03:30,673 WARNING: File not found: ./small_set/train_images/434488359/4025880011/5.dcm. Skipping.
+2024-07-08 02:03:30,719 WARNING: File not found: ./small_set/train_images/391103067/1771893480/18.dcm. Skipping.
+2024-07-08 02:03:30,720 WARNING: File not found: ./small_set/train_images/395898502/2306880371/4.dcm. Skipping.
+2024-07-08 02:03:30,720 WARNING: File not found: ./small_set/train_images/376723024/731802299/4.dcm. Skipping.
+2024-07-08 02:03:30,721 WARNING: File not found: ./small_set/train_images/409514453/328123155/14.dcm. Skipping.
+2024-07-08 02:03:30,721 WARNING: File not found: ./small_set/train_images/566498560/2612547148/28.dcm. Skipping.
+2024-07-08 02:34:06,908 INFO: Using device: cpu
+2024-07-08 02:34:06,918 INFO: Starting training for the first model...

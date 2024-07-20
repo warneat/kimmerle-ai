@@ -1,0 +1,57 @@
+stages:
+  - setup
+  - train
+  - check
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  DATA_DIR: "$CI_PROJECT_DIR/small_set/train_images"
+  CSV_FILE: "$CI_PROJECT_DIR/cleaned_train_label_coordinates.csv"
+  SAVE_DIR: "$CI_PROJECT_DIR/saved_models_and_plots"
+
+cache:
+  paths:
+    - .cache/pip
+#    - venv/
+
+before_script:
+  # remove the venv that is from my mac
+  - rm -rf venv
+  # Check if Python 3.9 is available
+  - python3.9 --version
+  # Create virtual environment
+  - python3.9 -m venv venv
+  # Activate virtual environment
+  - source venv/bin/activate
+  # Upgrade pip and setuptools
+  - python3.9 -m pip install --upgrade pip setuptools
+  # Install requirements
+  - python3.9 -m pip install -r requirements.txt
+
+setup_environment:
+  stage: setup
+  tags:
+    - ubu
+  script:
+    - python3.9 -m pip install --upgrade pip setuptools
+    - python3.9 -m pip install -r requirements.txt
+
+train_model:
+  stage: train
+  tags:
+    - ubu
+  script:
+    - python3.9 ai-kimmerle.py
+  artifacts:
+    when: always
+    paths:
+      - saved_models_and_plots/
+  only:
+    - main
+
+check_python_version:
+  stage: check
+  tags:
+    - ubu
+  script:
+    - python3.9 --version

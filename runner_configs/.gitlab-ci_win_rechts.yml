@@ -1,0 +1,41 @@
+stages:
+  - setup
+  - train
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  DATA_DIR: "$CI_PROJECT_DIR/small_set/train_images"
+  CSV_FILE: "$CI_PROJECT_DIR/cleaned_train_label_coordinates.csv"
+  SAVE_DIR: "$CI_PROJECT_DIR/saved_models_and_plots"
+
+cache:
+  paths:
+    - .cache/pip
+
+before_script:
+  - python -m venv venv
+  - call venv\Scripts\activate
+  - python -m pip install --upgrade pip
+  - python -m pip install -r requirements.txt
+
+setup_environment:
+  stage: setup
+  tags:
+    - win-rechts
+  script:
+    - call venv\Scripts\activate
+    - python -m pip install -r requirements.txt
+
+train_model:
+  stage: train
+  tags:
+    - win-rechts
+  script:
+    - call venv\Scripts\activate
+    - python monai_21.py
+  artifacts:
+    when: always
+    paths:
+      - saved_models_and_plots/
+  only:
+    - main
